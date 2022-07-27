@@ -4,14 +4,17 @@ export default function TextFrom(props) {
     const handleUpClick = ()=>{
         let newText = text.toUpperCase();
         setText(newText)
+        props.showAlert("Converted to UpeerCase", "success")
     }
     const handlelowClick = ()=>{
         let newText = text.toLowerCase();
         setText(newText)
+        props.showAlert("Converted to LowerCase", "success")
     }
     const handledeleteClick = ()=>{
         let newText =('');
         setText(newText)
+        props.showAlert("All Cleared!!!", "success")
     }
     const handleOnChange = (event)=>{
         setText(event.target.value)
